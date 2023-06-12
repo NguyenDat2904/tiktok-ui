@@ -1,0 +1,60 @@
+.wrapper {
+    padding: 20px;
+    width: 320px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    .follow-btn {
+        width: 106px;
+        height: 34px;
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+        }
+    }
+}
+.avatar {
+    border-radius: 50%;
+    display: block;
+    width: 44px;
+    flex: 0 0 44px;
+}
+
+.nickname {
+    display: flex;
+    align-items: center;
+    color: rgb(22, 24, 35);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+.icon {
+    color: rgb(32, 213, 236);
+    margin-left: 4px;
+    font-size: 1.4rem;
+}
+.name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: rgb(22, 24, 35);
+}
+.analytics {
+    margin-top: 8px;
+}
+.value {
+    font-weight: 700;
+    margin-right: 6px;
+    font-size: 1.7rem;
+    line-height: 20px;
+}
+.label {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 1.7rem;
+    line-height: 20px;
+    margin-right: 12px;
+    font-weight: 400;
+}

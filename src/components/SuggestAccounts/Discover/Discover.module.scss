@@ -1,0 +1,45 @@
+.wrapper {
+    padding: 16px 0 16px 24px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    overflow: hidden;
+}
+.label {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding-bottom: 16px;
+    color: rgba(22, 24, 35, 0.75);
+}
+.hastag-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style-type: none;
+}
+.hastag-box {
+    display: flex;
+    height: 24px;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    background: rgb(255, 255, 255);
+    border-radius: 12px;
+    transition: all 200ms ease-in-out 0s;
+    margin-right: 8px;
+    &:hover {
+        cursor: pointer;
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+.hastag-desc {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 6px;
+}
+.icon {
+}

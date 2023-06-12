@@ -1,0 +1,12 @@
+.wrapper {
+    position: fixed; /* Sidebar được cố định vị trí */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    margin-top: 60px;
+    width: 240px;
+    padding: 20px 0 26px;
+    background: rgba(255, 255, 255, 1);
+    // position: fixed;
+}

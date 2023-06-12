@@ -15,7 +15,7 @@ import {
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Button from '~/components/Button/Button';
 import Menu from '~/components/Propper/Menu/Menu';
 import { Message, Mailbox } from '~/components/Icons/Icons';
@@ -105,7 +105,7 @@ const userMenu = [
         separate: true,
     },
 ];
-const currentUser = false;
+const currentUser = true;
 
 function Header() {
     const handleMenuChange = (menuItem) => {
@@ -172,9 +172,11 @@ function Header() {
                     ) : (
                         <>
                             <div className={cx('upload')}>
-                                <Button upload leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                                    Tải lên
-                                </Button>
+                                <NavLink to={routes.upload}>
+                                    <Button upload leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                                        Tải lên
+                                    </Button>
+                                </NavLink>
                             </div>
                             <Button primary>Đăng nhập</Button>
                         </>

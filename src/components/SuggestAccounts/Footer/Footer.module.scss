@@ -1,0 +1,41 @@
+.wrapper {
+    padding: 16px 0 16px 24px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+.footer-list {
+    margin-bottom: 8px;
+}
+.footer-tem {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    color: rgba(22, 24, 35, 0.5);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.footer-more {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: rgba(22, 24, 35, 0.5);
+}
+.props-more {
+    padding: 15px 16px 20px;
+    max-width: 200px;
+    width: fit-content;
+    min-height: auto;
+}
+.props-text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 22px;
+    display: block;
+}
