@@ -1,0 +1,51 @@
+// menu wrapper
+.content {
+    width: min-content;
+
+    .menu-item {
+        white-space: nowrap;
+        font-size: 1.6rem;
+        padding: 11px 8px 11px 16px;
+        color: rgb(22, 24, 35);
+        border-radius: 0;
+        justify-content: flex-start;
+        width: 100%;
+        font-weight: 600;
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
+    }
+}
+.menu-Ellipsis {
+    padding: 8px;
+}
+.menu-propper {
+    padding-bottom: 8px;
+}
+.menu-srcoll {
+    overflow-y: auto;
+}
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+    flex-shrink: 0;
+}
+
+.back-icon {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
