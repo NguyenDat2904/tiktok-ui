@@ -22,6 +22,8 @@ import { Message, Mailbox } from '~/components/Icons/Icons';
 import Image from '~/components/Image/Image';
 import Search from '../Search/Search';
 import { routes } from '~/config/routes';
+import { user } from '~/config';
+
 const cx = classNames.bind(styles);
 
 const MENU_ITEM = [
@@ -101,16 +103,18 @@ const userMenu = [
     {
         icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
         title: 'Đăng xuất',
-        to: '/logout',
         separate: true,
     },
 ];
-const currentUser = true;
 
-function Header() {
-    const handleMenuChange = (menuItem) => {
-        console.log(menuItem);
+function Header({ toggle }) {
+    let imgEmail = localStorage.getItem('img');
+    let token = localStorage.getItem('login');
+    const current = token ? true : false;
+    const handleCurrent = () => {
+        token = localStorage.clear();
     };
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -153,7 +157,7 @@ function Header() {
                 <Search />
 
                 <div className={cx('action')}>
-                    {currentUser ? (
+                    {current ? (
                         <>
                             <div className={cx('current-user')}>
                                 <div className={cx('upload')}>
@@ -178,13 +182,19 @@ function Header() {
                                     </Button>
                                 </NavLink>
                             </div>
-                            <Button primary>Đăng nhập</Button>
+                            <Button primary onClick={toggle}>
+                                Đăng nhập
+                            </Button>
                         </>
                     )}
-                    <Menu items={currentUser ? userMenu : MENU_ITEM} onChange={handleMenuChange}>
-                        {currentUser ? (
+                    <Menu items={current ? userMenu : MENU_ITEM} handleCurrent={handleCurrent}>
+                        {current ? (
                             <Image
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/7e38951c6bf4e834ff74c01dc64f802b.jpeg?x-expires=1686542400&x-signature=u0heI7odtGvnrRzG25nsC3hjTgM%3D"
+                                src={
+                                    !imgEmail
+                                        ? 'https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/7e38951c6bf4e834ff74c01dc64f802b.jpeg?x-expires=1686542400&x-signature=u0heI7odtGvnrRzG25nsC3hjTgM%3D'
+                                        : imgEmail
+                                }
                                 className={cx('user-avatar')}
                             />
                         ) : (

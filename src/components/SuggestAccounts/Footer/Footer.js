@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Propper';
 
-
 const cx = classNames.bind(styles);
 const footerLinks = [
     'Giới thiệu',
@@ -47,7 +46,6 @@ function Footer() {
             </Link>
         );
     });
-    console.log(div1);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('footer-list')}>
@@ -64,7 +62,7 @@ function Footer() {
                 render={(attrs) => (
                     <div className={cx('content')} tabIndex="-1" {...attrs}>
                         <PopperWrapper className={cx('props-more')}>
-                            <Link className={cx("props-text")}>NGUYÊN TẮC THỰC THI PHÁP LUẬT CỦA TIKTOK</Link>
+                            <Link className={cx('props-text')}>NGUYÊN TẮC THỰC THI PHÁP LUẬT CỦA TIKTOK</Link>
                         </PopperWrapper>
                     </div>
                 )}

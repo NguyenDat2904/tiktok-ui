@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], onChange = defaultFn, handleCurrent }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
     const renderItems = () => {
@@ -27,6 +27,14 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                             setHistory((prev) => [...prev, item.children]);
                         } else {
                             onChange(item);
+                            switch (item.title) {
+                                case 'Đăng xuất':
+                                    window.location.reload();
+                                    handleCurrent();
+                                    break;
+                                default:
+                                    console.log('eror');
+                            }
                         }
                     }}
                 />
@@ -49,7 +57,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             render={(attrs) => (
                 <div className={cx('content')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-propper')}>
-                        {history.length > 1 && <Header title={current.title} onBack={handleBackMenu} />}
+                        {history.length > 1 && <Header title={current.title} onBack={handleBackMenu} disable />}
                         <div className={cx('menu-srcoll')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>

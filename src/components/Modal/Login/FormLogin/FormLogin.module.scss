@@ -1,0 +1,123 @@
+.login-title {
+    color: rgb(22, 24, 35);
+    font-size: 3.2rem;
+    line-height: 1.5;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
+}
+.header {
+    margin: 16px auto;
+}
+.btn {
+    position: absolute;
+    top: -10px;
+    width: 1rem;
+    height: 1rem;
+}
+.title-children {
+    color: rgb(22, 24, 35);
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.text-small {
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 250ms;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: rgba(22, 24, 35, 1);
+    }
+}
+.user {
+    font-size: 14px;
+    color: rgba(22, 24, 35, 1);
+    background-color: rgba(255, 255, 255, 1);
+    overscroll-behavior: contain;
+    direction: ltr;
+    margin-bottom: 9px;
+    .change-input {
+        position: relative;
+        margin-bottom: 9px;
+        input {
+            border-radius: 2px;
+            background-color: rgba(22, 24, 35, 0.06);
+            border: 1px solid rgba(22, 24, 35, 0.12);
+            padding-inline-start: 12px;
+            color: rgb(22, 24, 35);
+            line-height: 100%;
+            outline: none;
+            font-size: 1.6rem;
+            height: 44px;
+            caret-color: rgb(254, 44, 85);
+            width: 100%;
+            padding-inline-end: unset;
+        }
+        .error-input {
+            color: rgb(255, 76, 58);
+            caret-color: rgb(254, 44, 85);
+            border: 1px solid rgb(255, 76, 58);
+        }
+    }
+}
+.btn-login {
+    border: none;
+    min-width: 120px;
+    min-height: 46px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-weight: 700;
+    padding: 6px 8px;
+    user-select: none;
+    width: 100%;
+    margin-top: 21px;
+    &.disable {
+        border: none;
+        color: rgba(22, 24, 35, 0.34);
+        background-color: rgba(22, 24, 35, 0.06);
+        pointer-events: none;
+    }
+}
+.icon-warning {
+    right: 0px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    height: 44px;
+    padding-inline-end: 16px;
+}
+.error {
+    font-size: 1.2rem;
+    line-height: 15px;
+    margin: 4px 0px;
+    color: rgb(255, 76, 58);
+    display: flex;
+}
+.validate-pass {
+    p {
+        color: rgb(22, 24, 35);
+        font-weight: 600;
+        margin: 4px 0px;
+    }
+    .validate-check {
+        display: flex;
+        font-size: 1.2rem;
+        line-height: 15px;
+        margin: 4px 0px;
+        color: rgba(22, 24, 35, 0.5);
+    }
+    .validate-check-error {
+        color: rgb(255, 76, 58);
+        display: flex;
+        font-size: 1.2rem;
+        line-height: 15px;
+        margin: 4px 0px;
+    }
+}

@@ -7,13 +7,15 @@ import styles from './Menu.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Header({ title, onBack }) {
+function Header({ title, onBack, disable, className, header, btn }) {
     return (
-        <header className={cx('header')}>
-            <button className={cx('back-icon')} onClick={onBack}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
-            <h4 className={cx('header-title')}>{title}</h4>
+        <header className={cx('header', header)}>
+            {disable && (
+                <button className={cx('back-icon', btn)} onClick={onBack}>
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+            )}
+            <h4 className={cx('header-title', className)}>{title}</h4>
         </header>
     );
 }

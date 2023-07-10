@@ -1,0 +1,56 @@
+.wrapper {
+    overflow-y: auto;
+}
+.login-container {
+    width: 375px;
+    margin: auto;
+    padding: unset;
+}
+.login-title {
+    color: rgb(22, 24, 35);
+    font-size: 3.2rem;
+    line-height: 1.5;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
+}
+.header {
+    margin: 16px auto;
+}
+.btn {
+    position: absolute;
+    top: -10px;
+    width: 1rem;
+    height: 1rem;
+}
+.type {
+    color: rgb(22, 24, 35);
+    font-weight: 600;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    font-size: 1.5rem;
+    padding: 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 16px;
+    word-break: keep-all;
+    white-space: nowrap;
+    background: rgb(255, 255, 255);
+    .type-icon {
+        left: 1.2rem;
+        font-size: 20px;
+        position: absolute;
+    }
+}
+.facebook {
+    color: rgb(0, 117, 250);
+}
+.twitter {
+    color: rgb(29, 161, 242);
+}
+.line {
+    color: rgb(0, 185, 0);
+}
